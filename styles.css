@@ -14,22 +14,20 @@ article {
 
 .card {
     width: 600px;
-    height: 71vh;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     border-radius: 10px;          /* Added border radius for the card */
-    overflow: hidden; 
-    
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Optional: Add a subtle shadow for the card */
 }
 
 .left, .right {
     width: 50%;        /* Each will take 50% of the .card container */
     height: 100%;
     box-sizing: border-box; /* Ensure padding is part of the total size */
-    
-    
 }
 
 .left {
@@ -44,7 +42,8 @@ article {
 /* Styling for images */
 img {
     width: 100%;
-    height: 100%;
+    height: auto;  /* Ensure the image maintains its aspect ratio */
+    object-fit: cover; /* Ensure images cover the area without stretching */
 }
 
 /* Font styles for paragraphs and headings */
@@ -68,12 +67,14 @@ p {
     font-weight: 500;
     font-size: 14px;
 }
-button{
+
+/* Style for the button */
+button {
     width: 100%;
     padding: 0.8rem;
-
 }
-/* Style for the button */
+
+/* Cart Button Styling */
 .cart {
     display: flex;                /* Align items side by side */
     align-items: center;          /* Vertically center the items */
@@ -101,3 +102,35 @@ button{
     outline: none;               /* Remove focus outline */
 }
 
+/* Media query for screen widths 650px or less */
+@media (max-width: 650px) {
+    .card {
+        flex-direction: column;        /* Change the layout to column on smaller screens */
+        margin: 2rem;                  /* Adjust margins to prevent overflow */
+        height: auto;                  /* Set height to auto to fit content */
+    }
+
+    .left {
+        width: 100%;                   /* Full width for the image section */
+        height: auto;                  /* Auto height to maintain aspect ratio */
+    }
+
+    .right {
+        width: 100%;                   /* Full width for the text section */
+        padding: 20px;                 /* Adjust padding to make content more readable */
+    }
+
+    /* Ensure the text inside the right section is aligned properly */
+    /* p, h1 {
+        font-size: 16px;              /* Slightly larger font for readability on mobile */
+    /* } */ 
+
+    .cart {
+        padding: 12px 20px;           /* Adjust button padding on mobile */
+    }
+
+    .cart img {
+        width: 18px;                 /* Reduce cart icon size for mobile */
+        height: 18px;                /* Maintain aspect ratio for icon */
+    }
+}

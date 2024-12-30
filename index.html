@@ -24,7 +24,24 @@
    <article>
     <div class="card" >
       <div class="left">
-        <img src="./images/image-product-desktop.jpg"/>
+        <!-- <img src="./images/image-product-desktop.jpg"/> -->
+        <!-- <img 
+        src="./images/image-product-desktop.jpg" 
+        alt="Gabrielle Essence Eau De Parfum"
+        srcset="./images/image-product-desktop.jpg 1024w, ./images/image-product-mobile.jpg 650w"
+        sizes="(max-width: 650px) 100vw, 1024px"
+      /> -->
+      <picture class="card-picture">
+        <source
+          media="(max-width: 41.25rem)"
+          srcset="images/image-product-mobile.jpg"
+        />
+        <img
+          src="images/image-product-desktop.jpg"
+          alt="A Perfume bottle"
+        />
+      </picture>
+      
       </div>
       <div class="right">
         <p>P E R F U M E<p>
