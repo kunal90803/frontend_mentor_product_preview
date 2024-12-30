@@ -31,7 +31,7 @@ article {
 }
 
 .left {
-    background: green;
+    /* background: green; */
 }
 
 .right {
@@ -103,7 +103,7 @@ button {
 }
 
 /* Media query for screen widths 650px or less */
-@media (max-width: 650px) {
+@media (max-width: 670px) {
     .card {
         flex-direction: column;        /* Change the layout to column on smaller screens */
         margin: 2rem;                  /* Adjust margins to prevent overflow */
