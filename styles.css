@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box; /* Apply box-sizing: border-box globally */
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: hsl(30, 38%, 92%);
+}
+
+.card {
+    width: 600px;
+    height: 71vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 10px;          /* Added border radius for the card */
+    overflow: hidden; 
+    
+}
+
+.left, .right {
+    width: 50%;        /* Each will take 50% of the .card container */
+    height: 100%;
+    box-sizing: border-box; /* Ensure padding is part of the total size */
+    
+    
+}
+
+.left {
+    background: green;
+}
+
+.right {
+    background: white;
+    padding: 28px;
+}
+
+/* Styling for images */
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Font styles for paragraphs and headings */
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin: 1rem 0rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+    font-size: 14px;
+}
+button{
+    width: 100%;
+    padding: 0.8rem;
+
+}
+/* Style for the button */
+.cart {
+    display: flex;                /* Align items side by side */
+    align-items: center;          /* Vertically center the items */
+    justify-content: center;      /* Center items horizontally inside the button */
+    background-color: hsl(158, 36%, 37%);    /* Button background color (example: tomato) */
+    color: white;                 /* Text color */
+    padding: 15px 20px;           /* Button padding */
+    border-radius: 5px;           /* Rounded corners for the button */
+    border: none;                 /* Remove button border */
+    cursor: pointer;             /* Change cursor to pointer on hover */
+    font-size: 16px;              /* Text size */
+}
+
+.cart img {
+    width: 20px;                 /* Set image size */
+    height: 20px;                /* Set image size */
+    margin-right: 10px;          /* Space between the image and the text */
+}
+
+.cart:hover {
+    background-color: hsl(158, 48%, 26%);   /* Darker background on hover */
+}
+
+.cart:focus {
+    outline: none;               /* Remove focus outline */
+}
+
